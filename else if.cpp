@@ -4,7 +4,6 @@ int main (){
 	double score ;	
 	cout<<"enter the score";
 	cin>>score;
-	cout<<"the score is ="<<score;
 	if(score>90){
 		cout<<"A+";
 	}
