@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>registration</title>
+    <title>HTML FORM</title>
+    <link rel="icon" type="image/x-icon" href="./logo.ico"/>
     </head>
   <body>
-    <fieldset>
-        <label for="first name">first name</label>
-        <input type="text" id="first name" name="first name"/>
-    </fieldset>
-  </body>
    <fieldset>
+        <form method="get">
+            <label for="First name">First name</label>
+            <input type="text" id="First name" name="First name" required value="chala"/><br><br> 
+            
+            <label for="Last name">Last name</label>
+            <input type="text" id="Last name" name="Last name"/><br><br> 
+            
+            <label for="age">age</label>   
+            <input type="number" id="age" number="age" placeholder="Enter age"/><br><br> 
+            
+            <label for="email">email</label>
+            <input type= "text" id="email" name="email"/><br><br> 
+            
+            <label>courses</label><br><br>
+            <label for="natural">natural</label>
+            <input type= "radio" name="courses" id="natural"value="natural"/>
+            
+            <label for="social">social</label>
+            <input type= "radio" name="courses" id="natural" value="natural"/><br><br>
+
+             <label>select Gender</label><br><br>
+            <label for="mail">mail</label>
+            <input type= "radio" name="gender" id="mail"value="mail"/>
+            
+            <label for="femail">femail</label>
+            <input type= "radio" name="gender" id="femail" value="femail"/><br><br>
+            
+            <label for="select country"> select country</label>
+            <select id="country" name=""country>
+                <option "Eth">Ethiopia</option>
+                <option "usa">usa</option>
+                <option "uk">uk</option>
+            </select><br><br>
+            <label>hobby</label><br>
+            <label for="sport">sport</label>
+            <input type= "checkbox" name="hobby" id="sport" value="sport"/>
+
+            <label for="art">art</label>
+            <input type= "checkbox" name="hobby" id="art" value="art"/>
+
+            <label for="music">music</label>
+            <input type= "checkbox" name="hobby" id="music" value="music"/><br><br>
+            
+            <label>comment</label>
+            <textarea id="comment" name="comment" rows="5 cols=20"></textarea><br><br>
+            <button type="submit">submit</button> 
+            <button type="reset">reset</button> 
+        </form>   
+    </fieldset> 
+  </body>
+</html>
