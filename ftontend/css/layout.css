@@ -70,11 +70,15 @@ a{
 }
 .spacing{
   background-color: cadetblue;
+  display: inline-block;
   margin: 10px 20px 30px 40px;
   padding: 10px 20px 30px 40px;
 }
 .minandmax{
   background-color: darkcyan;
   max-width: 5cap;
-  min-width: 400px;
+  min-width: 00px;
+}
+ul{
+  list-style-type:upper-latin;
 }
