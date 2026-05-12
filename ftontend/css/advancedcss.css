@@ -1,0 +1,42 @@
+a:link{
+    color: deeppink;
+}
+a:visited{
+    color:green;
+}
+a:hover{
+    color:brown;
+}
+a:active{
+    color: blue;
+}
+.box{
+  background-color: aqua;
+  width:100px;
+  height:100px;
+  margin: 20px;
+}
+.box:hover{
+    background-color: chartreuse;
+}
+.mainbox{
+    background-color: red;
+}
+.mainbox :first-child{
+    background-color: blue;
+}
+p::first-line{
+    color: red;
+}
+p::first-letter{
+    color: blue;
+}
+h1::before{
+    content: '1';
+}
+h1::after{
+    content: "2";
+}
+p::selection{
+    background-color:yellow ;
+}
