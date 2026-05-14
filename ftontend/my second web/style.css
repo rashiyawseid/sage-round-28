@@ -2,44 +2,52 @@
     margin: opx;
     font-family: Arial, Helvetica, sans-serif;
 }
-.herosection{
-    background-color: #f5f7fa;
+.uppersection{
+    background-color: #FFD6D6;
 }
-.headerBox{
+.upperbox{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1230px;
-    height: 84px;
+    text-align: center;
+    max-width: 1180px;
+    height: 40px;
     margin: 0px auto;
 }
-.linkbox{
+.merging{
     display: flex;
-    gap: 50px;
+    gap: 100px;
+    align-items: center;
 }
 .link{
-    text-decoration: none;
-    color: #18191f;
+    display: flex;
+    gap: 40px
 }
-.textButton{
+.link1{
     text-decoration: none;
-    color:#4CAF4F;
+    color: #000000;
+}
+.link2{
+    text-decoration: none;
+    color: #A6A6A6;
+}
+.textbutton{
+text-decoration: none;
+    color:#000000;
     padding:10px 20px;
 }
-.ButtonBox{
+.buttonbox{
     display: flex;
-    gap: 14px;
+    gap: 10px;
 }
-.Button{
-    background-color:#4CAF4F ;
+.button{
+     background-color:#4CAF4F ;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 10px;
     color: white;
     padding: 10px 20px;
     display:inline-block;
-
 }
-.herobox{
+.mybox{
     min-height: 599px;
     display:flex;
     align-items: center;
@@ -47,18 +55,11 @@
     justify-content: center;
     padding: 0px 5px;
 }
-.herotext{
+.mytext{
     font-size: 64px;
     font-weight: bold;
     margin: 0px;
-}
-.herosuptext{
-    color: #4CAF4F;
-}
-.heroimage{
-    width: 391px;
-}
-@media screen and (max-width:1200px) {
+}@media screen and (max-width:1200px) {
    .herobox{
     flex-direction: column;
     gap: 50px;
