@@ -16,6 +16,7 @@ export default function App(){
   <Route path="Course" element ={<Course/>}/>
   <Route path="Course/:name" element ={<CourseDetail/>}/>
 </Route>
+<Route path ="*" element ={<NotFound/>}/>
   </Routes>  
   </BrowserRouter>
 }
