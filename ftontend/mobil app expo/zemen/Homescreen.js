@@ -6,5 +6,9 @@ export default function Homescreen({navigation}){
             />
              <Button title="Go to FlatListScreen" onPress={()=>navigation.navigate("FlatListScreen")}
              />
+             <Button title="Go to ApiCall" onPress={()=>navigation.navigate("ApiCall")}
+             />
+             <Button title="Go to CounterScreen" onPress={()=>navigation.navigate("CounterScreen")}
+             />
     </View>
 }
