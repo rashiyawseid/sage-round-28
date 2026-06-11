@@ -56,7 +56,7 @@ function Home() {
       {/* Footer */}
       <footer className="footer">
         <p>
-          © 2026 Burak Specialized Eye Care Center
+          © 2026 AFS Specialized Eye Care Center
         </p>
       </footer>
     </div>
