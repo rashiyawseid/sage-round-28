@@ -69,7 +69,7 @@ app.get( '/books', auth,async (req, res, next) => {
 
 app.post("/books", auth, async(req,res)=>{
     try{
-        if(req.user.role !=="admin"){
+        if(req.user.role != "admin"){
         return res.status(400).json({message:"not authorized!"})
      } 
         const book =new Book({
