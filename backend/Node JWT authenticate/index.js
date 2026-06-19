@@ -86,10 +86,10 @@ app.post("/books", auth, async(req,res)=>{
 })
 app.put("/books/:id",auth,async(req,res)=>{
     try{
-        const book = await Book.findByIdAndUpdate(req.params.id,{
+        const book = await Book.findById(req.params.id,{
             title:req.body.title,
             author:req.body.author,
-            price:req.body.price
+            price:req.body.pricenp
         },{new:true})
         return res.status(200).json(book)
     }catch(err){
