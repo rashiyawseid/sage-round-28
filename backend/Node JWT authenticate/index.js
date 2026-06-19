@@ -7,7 +7,7 @@ import { Book } from "./model/book.js";
 
 const app = express()
 
-mongoose.connect('mongodb://localhost:27017')
+mongoose.connect('mongodb+srv://abdyeenatu:uL7z4CbkpNZpxuOm@cluster0.dnixxbq.mongodb.net/auth?appName=Cluster0')
     .then(() => console.log("mogngodb connected!"))
     .catch((err) => console.log(err))
 
@@ -24,7 +24,8 @@ app.post('/signup', async (req, res) => {
         const newuser = new User({
             fullName: user.fullName,
             userName: user.userName,
-            password: hashedpassword
+            password: hashedpassword,
+            role: "user"
         })
         await newuser.save()
         return res.status(201).json({ message: "Account Created!" })
@@ -37,6 +38,7 @@ app.post('/signup', async (req, res) => {
 
 
 app.post('/login', async (req, res) => {
+
     const { userName, password } = req.body
     const user = await User.findOne({ userName: userName })
     if (!user) {
@@ -47,7 +49,7 @@ app.post('/login', async (req, res) => {
     if (!isMatch) {
         return res.status(400).json({ message: "Incorrect user name or passeword!" })
     }
-    const token = jwt.sign({ id: user.id, fullName: user.fullName, userName: user.userName, role: "admin" }, "123")
+    const token = jwt.sign({ id: user.id, fullName: user.fullName, userName: user.userName, role: user.role }, "123")
     return res.status(200).json({
         message: "login complited!",
         token: token
@@ -67,6 +69,9 @@ app.get( '/books', auth,async (req, res, next) => {
 
 app.post("/books", auth, async(req,res)=>{
     try{
+        if(req.user.role !=="admin"){
+        return res.status(400).json({message:"not authorized!"})
+     } 
         const book =new Book({
             title:req.body.title,
             author:req.body.author,
